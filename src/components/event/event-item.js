@@ -13,8 +13,12 @@ export default function EventItem(props) {
   const exploreLink = `/events/${id}`;
   return (
     <li className="flex flex-wrap md:flex-nowrap shadow-md rounded-lg overflow-hidden bg-white m-4 gap-4">
-      <img className=" h-52 w-full" src={"/" + image} alt={title} />
-      <div className="flex flex-col w-full px-4">
+      <img
+        className=" h-52 w-full md:w-2/5 object-fill"
+        src={"/" + image}
+        alt={title}
+      />
+      <div className="flex flex-col w-full md:w-3/5 px-4">
         <div className="">
           <h2 className="font-bold text-xl my-2 mx-0">{title}</h2>
           <h3 className="flex items-center  gap-2 font-bold text-gray-400">
