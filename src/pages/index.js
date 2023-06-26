@@ -1,11 +1,11 @@
-
+import EventList from "@/components/event/event-list";
+import { getFeaturedEvents } from "../../dummy-data";
 
 export default function Home() {
+  const featuredEvents = getFeaturedEvents();
   return (
-    <main
-      className="flex min-h-screen flex-col items-center justify-between p-24 "
-    >
-    <h1>Home</h1>
+    <main className="">
+      <EventList events={featuredEvents} />
     </main>
-  )
+  );
 }
