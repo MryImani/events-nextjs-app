@@ -1,0 +1,25 @@
+
+
+@media (min-width: 768px) {
+  .logistics {
+    padding: 2rem;
+    margin: -5rem auto;
+    gap: 3rem;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .image {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .image img {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .list {
+    align-items: flex-start;
+  }
+}
