@@ -3,6 +3,8 @@ import { getEventById } from "../../../dummy-data";
 import EventContent from "@/components/event/event-detail/event-content";
 import EventLogistics from "@/components/event/event-detail/event-logistics";
 import EventSummary from "@/components/event/event-detail/event-summary";
+import CommentList from "@/components/input/comment-list";
+import Comments from "@/components/input/comments";
 export default function EventDetailPage() {
   const router = useRouter();
   const eventId = router.query.eventId;
@@ -12,7 +14,7 @@ export default function EventDetailPage() {
   }
   return (
     <div className="">
-      <EventSummary title={event.title}/>
+      <EventSummary title={event.title} />
       <EventLogistics
         date={event.date}
         address={event.location}
@@ -20,6 +22,7 @@ export default function EventDetailPage() {
         imageAlt={event.title}
       />
       <EventContent>{event.description} </EventContent>
+      <Comments eventId={eventId} />
     </div>
   );
 }
