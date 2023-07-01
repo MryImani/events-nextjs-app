@@ -1,10 +1,13 @@
-import MainLayout from '@/components/layout/main'
-import '@/styles/globals.css'
+import MainLayout from "@/components/layout/main";
+import "@/styles/globals.css";
+import { NotificationContextProvider } from "../store/notification-context";
 
 export default function App({ Component, pageProps }) {
   return (
-    <MainLayout>
-      <Component {...pageProps} />
-    </MainLayout>
+    <NotificationContextProvider>
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
+    </NotificationContextProvider>
   );
 }
